@@ -1,0 +1,22 @@
+datasets:
+  cholect50:
+    data_dir: /data/xingjian_luo/dataset/CholecT50/video_clips_long
+    data_type: video # [images|videos|features]
+
+    build_info:
+      # Be careful not to append minus sign (-) before split to avoid itemizing
+      annotations:
+        train:
+          storage: /data/xingjian_luo/dataset/CholecT50/caption_train.json
+        val:
+          storage: /data/xingjian_luo/dataset/CholecT50/caption_test.json
+        test:
+          storage: /data/xingjian_luo/dataset/CholecT50/caption_test.json
+      video:
+        storage: /data/xingjian_luo/dataset/CholecT50/gpt_new_data/
+        train:
+          storage: /data/xingjian_luo/dataset/CholecT50/video_clips_long
+        val:
+          storage: /data/xingjian_luo/dataset/CholecT50/video_clips_long
+        test:
+          storage: /data/xingjian_luo/dataset/CholecT50/video_clips_long

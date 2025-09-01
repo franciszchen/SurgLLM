@@ -1,0 +1,22 @@
+datasets:
+  cholect50QA:
+    data_dir: /data/xingjian_luo/dataset/CholecT50/video_timeqa_clips
+    data_type: video # [images|videos|features]
+
+    build_info:
+      # Be careful not to append minus sign (-) before split to avoid itemizing
+      annotations:
+        train:
+          storage: /data/xingjian_luo/dataset/CholecT50/timeqa_train_new.json
+        val:
+          storage: /data/xingjian_luo/dataset/CholecT50/timeqa_test_new.json
+        test:
+          storage: /data/xingjian_luo/dataset/CholecT50/timeqa_test_new.json
+      video:
+        storage: /data/xingjian_luo/dataset/CholecT50/video_timeqa_clips
+        train:
+          storage: /data/xingjian_luo/dataset/CholecT50/video_timeqa_clips
+        val:
+          storage: /data/xingjian_luo/dataset/CholecT50/video_timeqa_clips
+        test:
+          storage: /data/xingjian_luo/dataset/CholecT50/video_timeqa_clips
