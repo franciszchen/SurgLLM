@@ -107,3 +107,24 @@ def check_video_frame(video_path):
 
     # 释放视频文件
     cap.release()
+
+
+def create_video_from_images(start,end,video_folder, output_video_path, fps=1):
+    # 获取图片文件列表并排序
+    images = []
+    for i in range(start,end+1):
+        images.append("/ssd/lxj/CholecT50/videos/VID{:02}/{:06}.png".format(video_folder,i))
+    # 读取第一张图片以获取视频的尺寸 
+    frame = cv2.imread(images[0])
+    height, width, layers = frame.shape
+
+    # 创建视频写入对象
+    fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # 使用 mp4v 编码
+    video = cv2.VideoWriter(output_video_path, fourcc, fps, (width, height))
+
+    for image in images:
+        img_path = os.path.join(image)
+        frame = cv2.imread(img_path)
+        video.write(frame)
+
+    video.release()
