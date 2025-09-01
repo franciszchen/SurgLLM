@@ -58,7 +58,5 @@ deepspeed = dict(
 1. Set `pretrained_path=your_model_path` in the running scripts before running the scripts.
 2. Set `zero_shot=True` and `evaluate=True` for zero-shot evaluation 
 
-## Finetuning
 
-Coming soon.
 
