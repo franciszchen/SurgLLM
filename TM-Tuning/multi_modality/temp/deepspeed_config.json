@@ -1,0 +1,27 @@
+{
+  "train_batch_size": 8,
+  "train_micro_batch_size_per_gpu": 8,
+  "steps_per_print": 100,
+  "optimizer": {
+    "type": "Adam",
+    "adam_w_mode": true,
+    "params": {
+      "lr": 1e-05,
+      "weight_decay": 0.02,
+      "bias_correction": true,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08
+    }
+  },
+  "zero_optimization": {
+    "stage": 1,
+    "reduce_bucket_size": 500000000.0
+  },
+  "bf16": {
+    "enabled": true
+  },
+  "gradient_clipping": 3.0
+}
