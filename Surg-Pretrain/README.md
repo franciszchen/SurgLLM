@@ -1,4 +1,4 @@
-The code is generated from # [CVPR 2023] Official Implementation of VideoMAE V2
+The code is generated from Official Implementation of VideoMAE V2
 
 
 ## Citation
